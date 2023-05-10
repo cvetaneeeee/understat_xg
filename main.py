@@ -70,9 +70,9 @@ def push_to_gsheets(key_path: str, spreadsheet: str, sheet: str, df: pd.DataFram
 
 
 if __name__ == '__main__':
-    path = 'keys.json'
-    spreadsheetId = '1rnuoXmFarbgEEIK3n7aViHhNU43a8VSq7VtSX4oh8DM'
-    sheetName = 'season'
+    path = "your path to keys.json"
+    spreadsheetId = "your sheet id"
+    sheetName = "your sheet name"
     dataframe = build_frame()
     push_to_gsheets(path, spreadsheetId, sheetName, dataframe)
 
