@@ -39,7 +39,7 @@ def parse_json() -> dict:
     return data
 
 
-def build_dict(func: dict) -> Iterator:
+def build_iter(func: dict) -> Iterator:
     for team_id in func.keys():
         team_name = func[team_id]['title']
         for row in func[team_id]['history']:
@@ -52,7 +52,7 @@ def build_dict(func: dict) -> Iterator:
 
 def build_frame() -> pd.DataFrame:
     columns = ['team', 'h_a', 'xG', 'xGA', 'games_played']
-    alldata = list(build_dict(parse_json()))
+    alldata = list(build_iter(parse_json()))
     alldata_frame = pd.DataFrame(alldata, columns=columns)
     return alldata_frame
 
@@ -70,11 +70,17 @@ def push_to_gsheets(key_path: str, spreadsheet: str, sheet: str, df: pd.DataFram
 
 
 if __name__ == '__main__':
-    path = "your path to keys.json"
-    spreadsheetId = "your sheet id"
-    sheetName = "your sheet name"
-    dataframe = build_frame()
-    push_to_gsheets(path, spreadsheetId, sheetName, dataframe)
 
-    end = perf_counter()
-    print(f'Finished scraping data in {end-start} seconds!')
+    path = "keys.json"
+    spreadsheetId = "1rnuoXmFarbgEEIK3n7aViHhNU43a8VSq7VtSX4oh8DM"
+    sheetName = "season"
+
+    try:
+        dataframe = build_frame()
+        push_to_gsheets(path, spreadsheetId, sheetName, dataframe)
+
+        end = perf_counter()
+        print(f'Finished scraping data in {end-start} seconds!')
+
+    except Exception as e:
+        print(str(e))
