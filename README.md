@@ -6,4 +6,4 @@ Repo scraping xG data from understat.com
 3. Copy the service account email, create a google spreadsheet and share it with the service account to give it access
 4. Copy your sheet ID and sheet name and paste them in lines 74 and 75 in the code
 5. Put the path to your credentials on line 73. If you've name your credentials keys.json and placed the file in this repo, the path should just read keys.json
-6. Adjust the indexes in the build_url function to scrape xG data for anothe season or league 
+6. Adjust the indexes in the build_url function to scrape xG data for another season or league 
