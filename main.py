@@ -58,7 +58,7 @@ def build_frame() -> pd.DataFrame:
 
 
 def push_to_gsheets(key_path: str, spreadsheet: str, sheet: str, df: pd.DataFrame) -> None:
-    scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
     credentials = service_account.Credentials.from_service_account_file(key_path, scopes=scope)
     client = gspread.authorize(credentials)
