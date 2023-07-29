@@ -4,7 +4,7 @@ import pandas as pd
 from collections.abc import Iterator
 
 league_ids = {"EPL":"39", "LaLiga":"140", "SerieA":"135", "Ligue1":"61", "Bundesliga":"78"}
-key = "9827825cbfmshd42a2badaac6f09p18e860jsn3f7778eddb0d"
+key = "your key"
 
 url = "https://api-football-v1.p.rapidapi.com/v3/fixtures"
 querystring = {f"league":{league_ids['Bundesliga']}, 
