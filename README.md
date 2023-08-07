@@ -11,7 +11,8 @@ Repo scraping xG data from understat.com
 6. Adjust the indexes in the build_url function to scrape xG data for another season or league
 
 
-# rapidapi.com - api-football api
+# rapidapi.com 
+Scraping fixtures and results data from api-football api on rapidapi.com
 
 ## rapidapi_fixtures.py
 
