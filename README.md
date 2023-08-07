@@ -1,5 +1,7 @@
-# understat_xg
+# understat.com
 Repo scraping xG data from understat.com
+
+## main.py
 
 1. I recommend cloning this repo in a virual environment, then install the packages in requirements.txt with pip install -r requirements.txt
 2. Set up a free service account in google cloud and store the credentials in a keys.json file, then place it in the repo
@@ -9,7 +11,7 @@ Repo scraping xG data from understat.com
 6. Adjust the indexes in the build_url function to scrape xG data for another season or league
 
 
-# Added two scripts to fetch data from api-football api on rapidapi.com for last and next fixtures for the 5 big leagues - EPL, La Liga, Serie A, Ligue 1 and Bundesliga
+# rapidapi.com - api-football api
 
 ## rapidapi_fixtures.py
 
